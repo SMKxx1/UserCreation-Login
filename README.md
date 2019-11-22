@@ -32,4 +32,23 @@ def encoder(password):
     password = password.hexdigest()
     return password
 ```
-### _sys_
+### _os_
+* [os](https://docs.python.org/3.7/library/os.html) - For clearing the screen
+```
+def clear():
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
+```
+### _time_
+* [time](https://docs.python.org/3.7/library/time.html) - For sleep function
+```
+time.sleep(1)
+```
+### _getpass_
+* [getpass](https://docs.python.org/3.7/library/getpass.html) - For getting the password without ECHO
+```
+password = getpass.getpass("Enter your password: ", stream=None)
+```
+
