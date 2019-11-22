@@ -28,6 +28,7 @@ Please ignore `port = 3306` argument.
 
 `passwd = "1234"` is the same as `password = "1234"`.
 
+
 ### __import hashlib__
 * [hashlib](https://pypi.org/project/hashlib/) - For hashing/encoding the password
 ```
@@ -40,7 +41,9 @@ Creating a Function called encoder so that we can cut time in encoding passwords
 
 `password = hashlib.md5(password.encode())` here `hashlib.md5` is used to convert the password
 to a md5 hash but it only works with utf-8 strings and since python uses unicode to store its strings
-we will have to convert it to utf-8 using the command `.encode()`.
+we will have to convert it to utf-8 using the command `.encode()`. After that the password will become a
+md5 memory object so in order to convert it back to a string `.hexdigest()` is used.
+
 
 ### __import os__
 * [os](https://docs.python.org/3.7/library/os.html) - For clearing the screen
@@ -53,7 +56,7 @@ def clear():
 ```
 There are a million things you can do with os module but here we will be using it to clear the screen.
 The clear screen command is different on windows, mac and linux so we use the platform module to find the 
-operating system. Then a command corresponding to the operating system being used.
+operating system. Then pass a command corresponding to the operating system being used.
 * Windows - `os.system('cls')`
 * Mac/Linux - `os.system('clear')`
 
@@ -71,7 +74,11 @@ time.sleep(1)
 ```
 password = getpass.getpass("Enter your password: ", stream=None)
 ```
-This is a module 
+This is a module to enter a password without it being shown on the screen
+### Example
+![alt text](https://github.com/SMKxx1/UserCreation-Login/blob/master/images/getpass.JPG)
+
+
 ### __import platform__
 * [platform](https://docs.python.org/3.7/library/platform.html) - For identifying the operating system
 ```
@@ -81,6 +88,8 @@ def clear():
     else:
         os.system('clear')
 ```
+This module is used to find out the operating system running the program.
+
 
 # MYSQL
 ## User Table
@@ -94,3 +103,5 @@ def clear():
 | surename  | varchar(50) | YES  |     | NULL    |                |
 | password  | varchar(50) | YES  |     | NULL    |                |
 
+## Example
+![alt text](https://github.com/SMKxx1/UserCreation-Login/blob/master/images/user%20table.JPG)
