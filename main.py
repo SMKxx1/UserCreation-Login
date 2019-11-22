@@ -1,6 +1,5 @@
 import pymysql
 import hashlib
-import sys
 import os
 import time
 import getpass
