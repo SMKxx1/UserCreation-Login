@@ -12,7 +12,7 @@ import getpass
 import platform 
 ```
 ### _pymysql_
-[pymysql](https://pypi.org/project/PyMySQL/) - For MYSQL connection
+* [pymysql](https://pypi.org/project/PyMySQL/) - For MYSQL connection
 ```
 conn = pymysql.connect(
     host = "localhost",
