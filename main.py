@@ -102,7 +102,7 @@ def login():
         else:
             print("You are Logged In!!!")
             input()
-            #Type your login function here
+            #Type your code here
             clear()
     except KeyboardInterrupt:
         clear()
